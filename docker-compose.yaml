@@ -15,3 +15,5 @@ services:
       dockerfile: dockerfiles/frontend.dockerfile
     ports:
       - "8501:8501"
+    environment:
+      - BACKEND_URL=http://backend:8000
