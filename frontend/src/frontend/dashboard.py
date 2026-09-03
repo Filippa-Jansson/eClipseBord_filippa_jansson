@@ -14,12 +14,10 @@ def main():
     lunar_df = pd.DataFrame(lunar_response.json())
     solar_df = pd.DataFrame(solar_response.json())
 
-        # Separate Lunar and Solar
+    #Tabs for lunar and solar data
     lunar_tab, solar_tab = st.tabs(["🌙 Lunar", "☀️ Solar"])
 
-    # -------------------------
-    # Lunar
-    # -------------------------
+    #Lunar tab
     with lunar_tab:
         st.markdown("## Lunar Eclipses")
 
@@ -48,10 +46,7 @@ def main():
         st.markdown("### Eclipse Data")
         st.dataframe(filtered_lunar)
 
-
-    # -------------------------
-    # Solar
-    # -------------------------
+    #Solar tab
     with solar_tab:
         st.markdown("## Solar Eclipses")
 
